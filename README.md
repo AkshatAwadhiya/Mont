@@ -108,3 +108,4 @@ This project is released under the MIT [LICENSE](https://github.com/catherineiso
 Feel free to incorporate this project into your personal portfolio! Showcase your skills and creativity by featuring your adaptations or implementations of this project. Just make sure to follow the guidelines of the MIT License while doing so.
 
 Happy coding!
+# Updated
