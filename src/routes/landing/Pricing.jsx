@@ -57,7 +57,7 @@ export default function Pricing({ loggedIn }) {
                             <span className="mt-2 mr-2 text-4xl font-medium">
                               Rs
                             </span>
-                            <span className="font-extrabold">79</span>
+                            <span className="font-extrabold">499</span>
                           </span>
                           <span className="text-xl font-medium text-gray-500">
                             /month
@@ -130,7 +130,7 @@ export default function Pricing({ loggedIn }) {
                           <span className="mt-2 mr-2 text-4xl font-medium">
                             Rs
                           </span>
-                          <span className="font-extrabold">149</span>
+                          <span className="font-extrabold">1149</span>
                         </span>
                         <span className="text-2xl font-medium text-gray-500">
                           /month
@@ -193,7 +193,7 @@ export default function Pricing({ loggedIn }) {
                             <span className="mt-2 mr-2 text-4xl font-medium">
                               Rs
                             </span>
-                            <span className="font-extrabold">349</span>
+                            <span className="font-extrabold">2349</span>
                           </span>
                           <span className="text-xl font-medium text-gray-500">
                             /month
