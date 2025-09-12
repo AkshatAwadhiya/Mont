@@ -1,3 +1,5 @@
+# ![Mont Landing Page](src/assets/images/instagram-preview.jpg)
+
 # Mont - #1 Instagram Growth Agency
 
 [![GitHub license](https://img.shields.io/github/license/catherineisonline/mont)](https://github.com/catherineisonline/mont/blob/main/LICENSE)
