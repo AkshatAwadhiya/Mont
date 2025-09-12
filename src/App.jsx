@@ -15,7 +15,7 @@ import Jobs from "./routes/jobs/Jobs";
 import SignIn from "./routes/sign-in/SignIn";
 import SignUp from "./routes/sign-up/SignUp";
 import BlogPost from "./routes/blog-post/BlogPost";
-import montBase from "./airtable/airtable";
+// import montBase from "./airtable/airtable";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Profile from "./routes/user-profile/Profile";
@@ -115,19 +115,26 @@ export default function App() {
       return false;
     } else {
       try {
-        montBase("users").create([
-          {
-            fields: {
-              id: id,
-              email: email.toLowerCase(),
-              password: password,
-              fullname: fullname,
-            },
+        const response = await fetch("/api/airtable", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
           },
-        ]);
-        return true;
+          body: JSON.stringify({
+            action: "registerUser",
+            user: {
+              id,
+              email: email.toLowerCase(),
+              password,
+              fullname,
+            },
+          }),
+        });
+        const result = await response.json();
+        return result.success;
       } catch (error) {
         console.error(error);
+        return false;
       }
     }
   };
@@ -159,14 +166,27 @@ export default function App() {
     }
   };
 
-  const deleteUser = (userId) => {
-    montBase("users").destroy([userId], function (err, deletedRecords) {
-      if (err) {
-        console.error(err);
-        return;
+  const deleteUser = async (userId) => {
+    try {
+      const response = await fetch("/api/airtable", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          action: "deleteUser",
+          userId,
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setLoggedIn(false);
+      } else {
+        console.error(result.error);
       }
-    });
-    setLoggedIn(false);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
