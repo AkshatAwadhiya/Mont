@@ -27,7 +27,7 @@ const navigation = {
   social: [
     {
       name: "Github",
-      href: "https://github.com/catherineisonline/edgy",
+      href: "https://github.com/AkshatAwadhiya",
       icon: Github,
     },
     {
@@ -37,7 +37,7 @@ const navigation = {
     },
     {
       name: "Linkedin",
-      href: "https://www.linkedin.com/in/catherinemitagvaria/",
+      href: "https://www.linkedin.com/in/akshat-awadhiya/",
       icon: Linkedin,
     },
   ],
