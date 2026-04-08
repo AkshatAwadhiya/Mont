@@ -32,7 +32,7 @@ const navigation = {
     },
     {
       name: "Portfolio",
-      href: "https://ekaterine-mitagvaria.vercel.app/",
+      href: "",
       icon: Portfolio,
     },
     {
